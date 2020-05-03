@@ -1,0 +1,49 @@
+.wall {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transition: all 1s linear;
+  @include screen_s() {
+    padding: $padding_wall_top_s 0 $padding_wall_bottom_s;
+    height: calc(100% - #{$footer_height_s});
+  }
+
+  @include screen_l() {
+    padding: $padding_wall_top_l 0 $padding_wall_bottom_l;
+
+    height: calc(100% - #{$footer_height_l});
+  }
+}
+.wall-advertise {
+  .advertise {
+    opacity: 1;
+  }
+  .wrapper:first-of-type {
+    transform: translateY(-100%);
+  }
+  .wrapper:last-of-type {
+    transform: translateY(100%);
+  }
+}
+
+.advertise {
+  overflow: hidden;
+  opacity: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s linear;
+  .advertise--inner {
+    img {
+      width: 60%;
+      height: 100%;
+      margin: auto;
+      display: block;
+    }
+  }
+}

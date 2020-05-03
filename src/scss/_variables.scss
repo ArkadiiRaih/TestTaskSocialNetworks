@@ -1,0 +1,66 @@
+// slide
+
+$padding_card_l: 60px;
+$padding_card_s: $padding_card_l / 2;
+
+// slide--icon
+$slide_icon_width_l: 50px;
+$slide_icon_width_s: $slide_icon_width_l / 2;
+
+$slide_icon_height_l: 30px;
+$slide_icon_height_s: $slide_icon_height_l / 2;
+
+// slide--content
+
+$margin_content_left_l: 36px;
+$margin_content_left_s: $margin_content_left_l / 2;
+
+$margin_content_bottom_l: 36px;
+$margin_content_bottom_s: $margin_content_bottom_l / 2;
+
+$padding_content_top_l: 72px;
+$padding_content_top_s: $padding_content_top_l / 2;
+
+$padding_content_side_l: 46px;
+$padding_content_side_s: $padding_content_side_l / 2;
+
+$padding_content_bottom_l: 54px;
+$padding_content_bottom_s: $padding_content_bottom_l / 2;
+
+$padding_content_l: $padding_content_top_l $padding_content_side_l
+  $padding_content_bottom_l;
+
+$padding_content_s: $padding_content_top_s $padding_content_side_s
+  $padding_content_bottom_s;
+
+$slide_content_width_l: 420px;
+$slide_content_width_s: $slide_content_width_l / 2;
+
+$slide_content_height_l: 90px;
+$slide_content_height_s: $slide_content_height_l / 2;
+
+// carousel--item
+
+$padding_c_item_l: 40px;
+$padding_c_item_s: $padding_c_item_l / 2;
+
+//wrapper
+
+$padding_wrapper_between_l: 24px;
+$padding_wrapper_between_s: $padding_wrapper_between_l / 2;
+
+//wall
+
+$padding_wall_top_l: 40px;
+$padding_wall_top_s: $padding_wall_top_l / 2;
+
+$padding_wall_bottom_l: 30px;
+$padding_wall_bottom_s: $padding_wall_bottom_l;
+
+//footer
+$footer_height_l: 200px;
+$footer_height_s: $footer_height_l / 2;
+
+//colors
+$color_brand: #177ee6;
+$color_default: #fff;

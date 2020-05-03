@@ -1,0 +1,47 @@
+.carousel {
+  position: relative;
+  height: 100%;
+  width: fit-content;
+  white-space: nowrap;
+  transform: translateX(-25vw);
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.carousel--item {
+  display: inline-block;
+  background-color: transparent;
+  width: 25vw;
+  height: 100%;
+  overflow: hidden;
+  transition: all 2s;
+  max-width: 20%;
+
+  &:first-child {
+    max-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  @include screen_s {
+    padding: 0 $padding_c_item_s / 2;
+    &:nth-child(3) {
+      padding-left: $padding_c_item_s;
+    }
+    &:nth-child(6) {
+      padding-right: $padding_c_item_s;
+    }
+  }
+  @include screen_l {
+    padding: 0 $padding_c_item_l / 2;
+    &:nth-child(3) {
+      padding-left: $padding_c_item_l;
+    }
+
+    &:nth-child(6) {
+      padding-right: $padding_c_item_l;
+    }
+  }
+}

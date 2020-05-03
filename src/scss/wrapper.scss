@@ -1,0 +1,19 @@
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  height: 50%;
+  transition: all 1s;
+
+  @include screen_s {
+    &:first-of-type {
+      padding-bottom: $padding_wrapper_between_s;
+    }
+  }
+
+  @include screen_l {
+    &:first-of-type {
+      padding-bottom: $padding_wrapper_between_l;
+    }
+  }
+}
