@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const bgs = [
   "./backgrounds/bg1.png",
@@ -6,16 +6,37 @@ const bgs = [
   "./backgrounds/bg3.png",
 ];
 
-function Media({ img, video, id }) {
+function Media({ img, video, id, setWithMedia }) {
+  const [usedResource, setUsedResource] = useState(video || img || bgs[id % 3]);
+
+  useEffect(() => {
+    if (img) {
+      fetch(img, {
+        method: "HEAD",
+      }).then(
+        (res) => {
+          if (res.status == 404) {
+            setUsedResource(bgs[id % 3]);
+            setWithMedia(false);
+          }
+        },
+        (reason) => {
+          setUsedResource(bgs[id % 3]);
+          setWithMedia(false);
+        }
+      );
+    }
+  }, [img, id]);
   if (!video) {
     return (
       <div
         className="slide--background"
         style={{
-          background: `url(${img || bgs[id % 3]}) center center / cover`,
+          background: `url(${usedResource}) center center / cover`,
+          // background: `url(./daskdmasfmsaf.png) center center / cover`,
         }}
-        onError={(error) => {
-          console.log(error);
+        onError={() => {
+          console.log(123);
         }}
       ></div>
     );
